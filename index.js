@@ -29,6 +29,16 @@ function handleSubmit() {
     (defaultName.textContent = newCocktail.name),
       (defaultIngredients.textContent = newCocktail.ingredients);
     defaultInstructions.textContent = newCocktail.instructions;
+
+    fetch("http://localhost:3000/cocktails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newCocktail),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   });
 }
 handleSubmit();
