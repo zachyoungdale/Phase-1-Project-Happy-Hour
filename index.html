@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <title>Happy Hour</title>
+  </head>
+  <body>
+    <div id="title-header">
+      <h1>Happy Hour</h1>
+    </div>
+
+    <div id="search-bar">
+      <form class="example" action="action_page.php">
+        <input
+          type="text"
+          placeholder="Enter cocktail name here"
+          name="search"
+        />
+        <button type="submit"><i class="search-button"></i>Search</button>
+      </form>
+    </div>
+
+    <div id="cocktail-details"></div>
+    <img
+      class="detail-image"
+      src="image-placeholder.png"
+      alt="Image placeholder"
+    />
+    <h2 class="name">Insert Name Here</h2>
+    <ul class="ingredients-list">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <p id="instructions-placeholder">Instructions</p>
+
+    <div id="new-cocktail-form">
+      <form id="new-cocktail">
+        <h4>Add New Cocktail</h4>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="new-name" />
+        <label for="image">Image: </label>
+        <input type="text" name="image" id="new-image" />
+        <label for="ingredients">Ingredients: </label>
+        <input type="text" name="ingredients" id="new-ingredients" />
+        <label for="new-instructions">Instructions: </label>
+        <textarea name="new-instructions" id="new-instructions"></textarea>
+        <input type="submit" value="Create" />
+      </form>
+    </div>
+  </body>
+</html>
