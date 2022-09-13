@@ -1,7 +1,7 @@
 fetch("http://localhost:3000/cocktails")
   .then((response) => response.json())
   .then((data) => {
-    randomCocktail(data)
+    randomCocktail(data);
   });
 
 //Zach here. this code below should handle the submit form for the new cocktail.
@@ -26,47 +26,35 @@ function handleSubmit() {
       image: newImage,
       ingredients: newIngredients,
       instructions: newInstructions,
-    }
-      
-      fetch("http://localhost:3000/cocktails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newCocktail),
-      })
-        .then((response) => response.json())
-        .then((data) => console.log(data));
-    
+    };
 
-    detailImage.src = newCocktail.image
-    (defaultName.textContent = newCocktail.name),
-      (defaultIngredients.textContent = newCocktail.ingredients)
-    defaultInstructions.textContent = newCocktail.Instructions;
-  })
-}
-  
-
-    // Paul here. This code is for generating random cocktail recipe.
-    
-  function randomCocktail(cocktails){
-
-    btn.addEventListener('click', function(){
-    let randomCocktails = cocktails[Math.floor(Math.random() * cocktails.length)]
-    detailImage.src = randomCocktails.image
-    defaultName.textContent = randomCocktails.name
-    defaultIngredients.textContent = randomCocktails.ingredients
-    defaultInstructions.textContent = randomCocktails.Instructions
+    fetch("http://localhost:3000/cocktails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newCocktail),
     })
-  }
-//  James here, This code is for handle search bar
+      .then((response) => response.json())
+      .then((data) => console.log(data));
 
-function handleSearchBar(data){
-  console.log(data)
-  const searchForm = document.querySelector(".searchbar")
-  searchForm.addEventListener("submit", (event)=> {
-    event.preventDefault()
-    let searchInp
+    detailImage.src = newCocktail.image;
+    (defaultName.textContent = newCocktail.name),
+      (defaultIngredients.textContent = newCocktail.ingredients);
+    defaultInstructions.textContent = newCocktail.Instructions;
+  });
+}
+handleSubmit();
 
-  })
+// Paul here. This code is for generating random cocktail recipe.
+
+function randomCocktail(cocktails) {
+  btn.addEventListener("click", function () {
+    let randomCocktails =
+      cocktails[Math.floor(Math.random() * cocktails.length)];
+    detailImage.src = randomCocktails.image;
+    defaultName.textContent = randomCocktails.name;
+    defaultIngredients.textContent = randomCocktails.ingredients;
+    defaultInstructions.textContent = randomCocktails.Instructions;
+  });
 }
