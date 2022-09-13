@@ -10,6 +10,7 @@ const detailImage = document.querySelector(".detail-image");
 const defaultName = document.querySelector(".name");
 const defaultIngredients = document.querySelector(".ingredient-list");
 const defaultInstructions = document.querySelector("#instructions-placeholder");
+const btn = document.querySelector("#random-cocktail");
 
 function handleSubmit() {
   const newCocktailForm = document.querySelector("#new-cocktail");
@@ -52,6 +53,9 @@ function handleSubmit() {
 
     btn.addEventListener('click', function(){
     let randomCocktails = cocktails[Math.floor(Math.random() * cocktails.length)]
-    output.inner.HTML = randomCocktails
+    detailImage.src = randomCocktails.image
+    defaultName.textContent = randomCocktails.name
+    defaultIngredients.textContent = randomCocktails.ingredients
+    defaultInstructions.textContent = randomCocktails.instructions
     })
   }
