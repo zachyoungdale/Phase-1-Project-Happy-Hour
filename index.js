@@ -2,7 +2,6 @@ fetch("http://localhost:3000/cocktails")
   .then((response) => response.json())
   .then((data) => {
     randomCocktail(data)
-    handleSearchBar(data)
   });
 
 //Zach here. this code below should handle the submit form for the new cocktail.
@@ -60,22 +59,14 @@ function handleSubmit() {
     defaultInstructions.textContent = randomCocktails.Instructions
     })
   }
+//  James here, This code is for handle search bar
 
-  // James here. This code is for handle search bar
-  function handleSearchBar(data){
+function handleSearchBar(data){
+  console.log(data)
+  const searchForm = document.querySelector(".searchbar")
+  searchForm.addEventListener("submit", (event)=> {
+    event.preventDefault()
+    let searchInp
 
-    const searchForm = document.querySelector(".searchbar")
-    searchForm.addEventListener("submit",(event)=> {
-      event.preventDefault()
-      let searchInput = event.target["search"].value
-      const findCocktail = data.find((cocktail)=>{
-        return cocktail.name === searchInput.toLowerCase()
-        })
-        console.log(findCocktail)
-      detailImage.src = findCocktail.image
-      defaultName.innerText = findCocktail.name
-      defaultIngredients.innerText = findCocktail.ingredients
-      defaultInstructions.innerText = findCocktail.instructions
-    })
-
-  }
+  })
+}
