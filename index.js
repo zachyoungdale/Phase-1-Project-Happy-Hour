@@ -1,6 +1,7 @@
 fetch("http://localhost:3000/cocktails")
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => {
+  });
 
 //Zach here. this code below should handle the submit form for the new cocktail.
 
@@ -42,3 +43,26 @@ function handleSubmit() {
   });
 }
 handleSubmit();
+
+// James here, this code handles the search bar
+function handleSearchBar(data){
+  console.log(data)
+  const searchForm = document.querySelector(".searchbar")
+  searchForm.addEventListener("submit", (event)=> {
+    event.preventDefault()
+    let searchInput = event.target["search"].value;
+    const findCocktail = data.find((cocktail)=>{
+      return cocktail.name === searchInput
+    })
+    let searchImg = document.querySelector(".detail-image")
+    searchImg.src = findCocktail.image
+    let searchName = document.querySelector(".name")
+    searchName.innerText = findCocktail.name
+    let searchIngredient = document.querySelector(".ingredient-list")
+    searchIngredient.innerText = findCocktail.ingredients
+    let searchInstruction = document.querySelector("#instructions-placeholder")
+    searchInstruction.innerText = findCocktail.Instructions
+    
+  })
+}
+
