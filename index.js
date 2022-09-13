@@ -42,7 +42,7 @@ function handleSubmit() {
     detailImage.src = newCocktail.image
     (defaultName.textContent = newCocktail.name),
       (defaultIngredients.textContent = newCocktail.ingredients)
-    defaultInstructions.textContent = newCocktail.instructions;
+    defaultInstructions.textContent = newCocktail.Instructions;
   })
 }
   
@@ -56,6 +56,6 @@ function handleSubmit() {
     detailImage.src = randomCocktails.image
     defaultName.textContent = randomCocktails.name
     defaultIngredients.textContent = randomCocktails.ingredients
-    defaultInstructions.textContent = randomCocktails.instructions
+    defaultInstructions.textContent = randomCocktails.Instructions
     })
   }
