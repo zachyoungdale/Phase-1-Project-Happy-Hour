@@ -13,7 +13,8 @@ p {
 }
 h1 {
   color: orange;
-  font-family: Georgia, "Times New Roman", Times, serif
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 100px;
 }
 
 #cocktail-details {
@@ -57,12 +58,11 @@ h1 {
 }
 /* James Here */
 #search-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-
 
 #search-button {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -73,12 +73,12 @@ h1 {
   border-color: black;
   width: 100px;
   padding: 10px;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 10px;
   border-radius: 10px;
-  }
+}
 
-  #searchinput {
+#searchinput {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: small;
   font-weight: bold;
@@ -86,40 +86,34 @@ h1 {
   width: 350px;
   height: 30px;
   border-radius: 10px;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 10px;
   margin-right: 30px;
+}
 
-  }
+#new-cocktail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-
-
-  #new-cocktail {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .form-inputs {
-    font-family: Georgia, "Times New Roman", Times, serif;
+.form-inputs {
+  font-family: Georgia, "Times New Roman", Times, serif;
   border-color: black;
   width: 350px;
   height: 30px;
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
-  }
+}
 
-  .new-labels {
+.new-labels {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-  }
-
-  #new-form-submit-button {
-    font-family: Georgia, "Times New Roman", Times, serif;
+#new-form-submit-button {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: small;
   font-weight: bold;
   background-color: orange;
@@ -130,13 +124,12 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  }
+}
 
-  #new-cocktail-form {
-    margin-top: 50px;
-  }
+#new-cocktail-form {
+  margin-top: 50px;
+}
 
-  #new-form-title {
-    font-size: 40px;
-
-  }
+#new-form-title {
+  font-size: 40px;
+}
