@@ -94,3 +94,49 @@ h1 {
 
 
 
+  #new-cocktail {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-inputs {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  border-color: black;
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+
+  .new-labels {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  #new-form-submit-button {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: small;
+  font-weight: bold;
+  background-color: orange;
+  color: white;
+  border-color: black;
+  width: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  }
+
+  #new-cocktail-form {
+    margin-top: 50px;
+  }
+
+  #new-form-title {
+    font-size: 40px;
+
+  }
