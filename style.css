@@ -3,19 +3,99 @@ body {
   background-color: black;
 }
 form {
-    color: orange
+  color: orange;
 }
-h2,h4,p {
-
-    color: orange
+h2,
+h4,
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: orange;
 }
 h1 {
-    color: orange;
+  color: orange;
+}
+
+#cocktail-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#random-cocktail {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+  background-color: orange;
+  color: white;
+  width: 500px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.name {
+  font-size: 75px;
+  margin-bottom: 10px;
+}
+
+.ingredients-list {
+  font-size: 75px;
+}
+
+#instructions-placeholder {
+  font-size: 20px;
+  width: 500px;
+  height: auto;
+  text-justify: left;
+}
+
+.detail-image {
+  width: 500px;
+  height: auto;
 }
 /* James Here */
-.search-button:hover {
-    color: orange;
-    background-color: orange
-    
-   
+#search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .example{font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: small;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    width: 500px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px; */
+
+/* } */
+
+#search-button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: small;
+  font-weight: bold;
+  background-color: orange;
+  color: white;
+  border-color: black;
+  width: 100px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  }
+
+  #searchinput {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: small;
+  font-weight: bold;
+  border-color: black;
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+
   }
