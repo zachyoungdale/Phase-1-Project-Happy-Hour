@@ -1,7 +1,7 @@
 fetch("http://localhost:3000/cocktails")
   .then((response) => response.json())
   .then((data) => {
-    randomCocktail(data)
+    randomCocktail(data);
     handleSearchBar(data);
   });
 
@@ -55,29 +55,31 @@ function randomCocktail(cocktails) {
       cocktails[Math.floor(Math.random() * cocktails.length)];
     detailImage.src = randomCocktails.image;
     defaultName.textContent = randomCocktails.name;
-    defaultIngredients.textContent = randomCocktails.ingredients;
-    defaultInstructions.textContent = randomCocktails.Instructions;
+    defaultIngredients.textContent = `Ingredients:  ${randomCocktails.ingredients}`;
+    defaultInstructions.textContent = `Instructions: ${randomCocktails.Instructions}`;
   });
 }
 
 // James here. This code is for handle search button
 
-function handleSearchBar(cocktails){
-  const searchForm = document.querySelector(".example")
-  searchForm.addEventListener("submit", (event)=> {
-    event.preventDefault()
+function handleSearchBar(cocktails) {
+  const searchForm = document.querySelector(".example");
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
     let searchInput = event.target["search"].value;
-    cocktails.find((cocktail)=>{
-      if(searchInput.charAt(0).toUpperCase()+searchInput.slice(1) === cocktail.name){
-        detailImage.src = cocktail.image
-        defaultName.innerText = cocktail.name
-        defaultIngredients.innerText = cocktail.ingredients
-        defaultInstructions.innerText = cocktail.Instructions
-      }else{
-       console.error("Cocktail Not Found")
-    //    we will put a error message on display
+    cocktails.find((cocktail) => {
+      if (
+        searchInput.charAt(0).toUpperCase() + searchInput.slice(1) ===
+        cocktail.name
+      ) {
+        detailImage.src = cocktail.image;
+        defaultName.innerText = cocktail.name;
+        defaultIngredients.innerText = cocktail.ingredients;
+        defaultInstructions.innerText = cocktail.Instructions;
+      } else {
+        console.error("Cocktail Not Found");
+        //    we will put a error message on display
       }
-    })
-    
-  })
+    });
+  });
 }
