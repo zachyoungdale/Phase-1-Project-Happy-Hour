@@ -77,7 +77,7 @@ function handleSearchBar(cocktails) {
         defaultIngredients.innerText = cocktail.ingredients;
         defaultInstructions.innerText = cocktail.Instructions;
       } else {
-        console.log("Item not found");
+        alert("Cocktail not found");
         
         //    we will put a error message on display
       }
