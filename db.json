@@ -69,6 +69,7 @@
       "image": "https://www.thecocktaildb.com/images/media/drink/juhcuu1504370685.jpg",
       "ingredients": "Champagne, Orange Juice",
       "Instructions": "Ensure both ingredients are well chilled, then mix into the glass. Serve cold."
+<<<<<<< HEAD
     },
     {
       "name": "",
@@ -90,6 +91,8 @@
       "ingredients": "123",
       "instructions": "123",
       "id": 13
+=======
+>>>>>>> 14933ac1efb30525af4e74a8d817bc4b7eeb3d15
     }
   ]
 }
