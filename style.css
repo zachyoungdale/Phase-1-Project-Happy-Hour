@@ -78,6 +78,7 @@ h1 {
   border-radius: 10px;
   }
 
+  
   #searchinput {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: small;
@@ -138,5 +139,6 @@ h1 {
 
   #new-form-title {
     font-size: 40px;
-
+    
+    
   }
