@@ -26,7 +26,7 @@ function handleSubmit() {
       name: newName,
       image: newImage,
       ingredients: newIngredients,
-      instructions: newInstructions,
+      Instructions: newInstructions,
     };
 
     fetch("http://localhost:3000/cocktails", {
@@ -67,6 +67,7 @@ function handleSearchBar(cocktails) {
   searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
     let searchInput = event.target["search"].value;
+    let searchFind = false;
     cocktails.find((cocktail) => {
       if (
         searchInput.charAt(0).toUpperCase() + searchInput.slice(1) ===
@@ -76,11 +77,11 @@ function handleSearchBar(cocktails) {
         defaultName.innerText = cocktail.name;
         defaultIngredients.innerText = cocktail.ingredients;
         defaultInstructions.innerText = cocktail.Instructions;
-      } else {
-        alert("Cocktail not found");
-        
-        //    we will put a error message on display
+        searchFind = true;
       }
     });
+    if (searchFind === false) {
+      alert("Cocktail Not Found");
+    }
   });
 }
